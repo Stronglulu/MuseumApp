@@ -5,7 +5,6 @@ using System;
 public class AlignExtending : MonoBehaviour
 {
     public Painting painting;
-    public float s = 720;
 
     private Renderer renderer;
 
@@ -18,13 +17,15 @@ public class AlignExtending : MonoBehaviour
 	
 	void Update()
     {
+        // This is called in update to ensure the painting object is already initialized.
         ScaleTexture();
 	}
 
+    // Loads the extension material.
     void LoadMaterial()
     {
+        // Use the name of the painting.
         string paintingName = painting.paintingName;
-
         if (paintingName != "")
         {
             Material material = Resources.Load("Materials/Illusions/Extending/" + paintingName, typeof(Material)) as Material;
@@ -34,23 +35,21 @@ public class AlignExtending : MonoBehaviour
 
     void ScaleTexture()
     {
+        // Calculate the pixels per unit for the current extension texture.
         Vector3 wallSize = renderer.bounds.size;
         float ratioX = (float)renderer.material.mainTexture.width / wallSize.x;
         float ratioY = (float)renderer.material.mainTexture.height / wallSize.y;
-        Debug.Log("wallSize: " + wallSize);
-        Debug.Log("ratioX: " + ratioX);
-        Debug.Log("ratioY: " + ratioY);
 
+        // Calculate the pixels per unit for the painting texture.
         Vector3 paintingSize = painting.renderer.bounds.size;
         float maxSize = Math.Max(paintingSize.x, paintingSize.y);
-        float paintingRatio = s / maxSize;
-        Debug.Log("paintingRatio: " + paintingRatio);
+        float paintingRatio = Math.Max(painting.renderer.material.mainTexture.width, painting.renderer.material.mainTexture.height) / maxSize;
 
+        // Determine the scale for the extension texture in X and Y direction.
         float xs = paintingRatio / ratioX;
         float ys = paintingRatio / ratioY;
-        Debug.Log("xs: " + xs);
-        Debug.Log("ys: " + ys);
 
+        // Scale and center the texture.
         renderer.material.mainTextureScale = new Vector2(xs, ys);
         renderer.material.mainTextureOffset = new Vector2(-xs / 2 + 0.5f, -ys / 2 + 0.5f);
     }
