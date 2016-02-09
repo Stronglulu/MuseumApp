@@ -6,11 +6,11 @@ public class AlignExtending : MonoBehaviour
 {
     public Painting painting;
 
-    private Renderer renderer;
+    private Renderer rend;
 
 	void Start()
     {
-        renderer = GetComponent<Renderer>();
+        rend = GetComponent<Renderer>();
 
         LoadMaterial();
 	}
@@ -29,28 +29,28 @@ public class AlignExtending : MonoBehaviour
         if (paintingName != "")
         {
             Material material = Resources.Load("Materials/Illusions/Extending/" + paintingName, typeof(Material)) as Material;
-            renderer.material = material;
+            rend.material = material;
         }
     }
 
     void ScaleTexture()
     {
         // Calculate the pixels per unit for the current extension texture.
-        Vector3 wallSize = renderer.bounds.size;
-        float ratioX = (float)renderer.material.mainTexture.width / wallSize.x;
-        float ratioY = (float)renderer.material.mainTexture.height / wallSize.y;
+        Vector3 wallSize = rend.bounds.size;
+        float ratioX = (float)rend.material.mainTexture.width / wallSize.x;
+        float ratioY = (float)rend.material.mainTexture.height / wallSize.y;
 
         // Calculate the pixels per unit for the painting texture.
-        Vector3 paintingSize = painting.renderer.bounds.size;
+        Vector3 paintingSize = painting.rend.bounds.size;
         float maxSize = Math.Max(paintingSize.x, paintingSize.y);
-        float paintingRatio = Math.Max(painting.renderer.material.mainTexture.width, painting.renderer.material.mainTexture.height) / maxSize;
+        float paintingRatio = Math.Max(painting.rend.material.mainTexture.width, painting.rend.material.mainTexture.height) / maxSize;
 
         // Determine the scale for the extension texture in X and Y direction.
         float xs = paintingRatio / ratioX;
         float ys = paintingRatio / ratioY;
 
         // Scale and center the texture.
-        renderer.material.mainTextureScale = new Vector2(xs, ys);
-        renderer.material.mainTextureOffset = new Vector2(-xs / 2 + 0.5f, -ys / 2 + 0.5f);
+        rend.material.mainTextureScale = new Vector2(xs, ys);
+        rend.material.mainTextureOffset = new Vector2(-xs / 2 + 0.5f, -ys / 2 + 0.5f);
     }
 }

@@ -4,11 +4,11 @@ using System.Collections;
 public class Painting : MonoBehaviour
 {
     public string paintingName = "";
-    public Renderer renderer;
+    public Renderer rend;
 
 	void Start()
     {
-        renderer = GetComponent<Renderer>();
+        rend = GetComponent<Renderer>();
 
         LoadMaterial();
         ScaleObject();
@@ -20,7 +20,7 @@ public class Painting : MonoBehaviour
         if (paintingName != "")
         {
             Material material = Resources.Load("Materials/Paintings/" + paintingName, typeof(Material)) as Material;
-            renderer.material = material;
+            rend.material = material;
         }
     }
 
@@ -28,7 +28,7 @@ public class Painting : MonoBehaviour
     void ScaleObject()
     {
         // Get the proportions of the painting texture.
-        Texture texture = renderer.material.mainTexture;
+        Texture texture = rend.material.mainTexture;
         float paintingWidth = (float)texture.width;
         float paintingHeight = (float)texture.height;
         float proportions = paintingWidth / paintingHeight;
