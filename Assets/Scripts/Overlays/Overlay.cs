@@ -5,9 +5,9 @@ public class Overlay : MonoBehaviour
 {
     public float animationTime = 1;
 
-    private Renderer rend;
-    private float t;
-    private Function function;
+    protected Renderer rend;
+    protected float t;
+    protected Function function;
 
     void Start()
     {
@@ -17,9 +17,14 @@ public class Overlay : MonoBehaviour
 	
 	void Update()
     {
+        UpdateOverlay();
+        t += Time.deltaTime;
+	}
+
+    public virtual void UpdateOverlay()
+    {
         Color c = rend.material.color;
         c.a = function.Calc(t / animationTime);
         rend.material.color = c;
-        t += Time.deltaTime;
-	}
+    }
 }
