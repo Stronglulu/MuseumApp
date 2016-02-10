@@ -17,14 +17,14 @@ public class Overlay : MonoBehaviour
 	
 	void Update()
     {
-        UpdateOverlay();
+        UpdateOverlay(function.Calc(t / animationTime));
         t += Time.deltaTime;
 	}
 
-    public virtual void UpdateOverlay()
+    public virtual void UpdateOverlay(float val)
     {
         Color c = rend.material.color;
-        c.a = function.Calc(t / animationTime);
+        c.a = val;
         rend.material.color = c;
     }
 }

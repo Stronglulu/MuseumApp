@@ -14,21 +14,16 @@ public class OverlayCircle : Overlay
         ScaleTexture();
     }
 
-    public override void UpdateOverlay()
+    public override void UpdateOverlay(float val)
     {
-        float xs = initialScale.x * (1f - ((float)Math.Max(function.Calc(t / animationTime), 0.01f))) * 3f;
-        float ys = initialScale.y * (1f - ((float)Math.Max(function.Calc(t / animationTime), 0.01f))) * 3f;
-        Debug.Log(xs);
+        float xs = initialScale.x * (1f / (1 - val + 0.1f) / 2.2f);
+        float ys = initialScale.y * (1f / (1 - val + 0.1f) / 2.2f);
         rend.material.mainTextureScale = new Vector2(xs, ys);
         rend.material.mainTextureOffset = new Vector2(-xs / 2 + 0.5f, -ys / 2 + 0.5f);
     }
 
     private void ScaleTexture()
     {
-        Texture texture = rend.material.mainTexture;
-        float paintingWidth = (float)texture.width;
-        float paintingHeight = (float)texture.height;
-
         Vector3 overlaySize = rend.bounds.size;
         float proportions = overlaySize.x / overlaySize.y;
 
