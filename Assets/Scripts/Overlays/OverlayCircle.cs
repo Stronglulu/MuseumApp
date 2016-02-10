@@ -22,7 +22,7 @@ public class OverlayCircle : Overlay
         rend.material.mainTextureOffset = new Vector2(-xs / 2 + 0.5f, -ys / 2 + 0.5f);
     }
 
-    private void ScaleTexture()
+    protected virtual void ScaleTexture()
     {
         Vector3 overlaySize = rend.bounds.size;
         float proportions = overlaySize.x / overlaySize.y;
