@@ -1,10 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Function
+public abstract class Function
 {
-    public virtual float Calc(float x)
-    {
-        return 0;
-    }
+    public abstract float Calc(float x);
 }
