@@ -17,7 +17,7 @@ public class MySceneManager : MonoBehaviour {
         barBGMat = Resources.Load("Materials/barBG") as Material;
         barSelectedMat = Resources.Load("Materials/barSelected") as Material;
         progressBar = GameObject.Find("Bar Progress Pivot");
-	
+	    
 	}
 	
 	// Update is called once per frame
