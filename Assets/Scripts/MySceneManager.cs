@@ -16,7 +16,7 @@ public class MySceneManager : MonoBehaviour {
         timer = 0;
         barBGMat = Resources.Load("Materials/barBG") as Material;
         barSelectedMat = Resources.Load("Materials/barSelected") as Material;
-        progressBar = GameObject.Find("Bar Progress Pivot");
+        progressBar = transform.parent.FindChild("Bar Progress Pivot").gameObject;
 	    
 	}
 	
