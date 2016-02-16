@@ -9,7 +9,7 @@ public class Overlay : MonoBehaviour
     protected float t;
     protected Function function;
 
-    void Start()
+    protected void Start()
     {
         rend = GetComponent<Renderer>();
         function = new WaveFunction();
