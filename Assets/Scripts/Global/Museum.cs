@@ -17,14 +17,6 @@ public static class Museum
         string currentPath = getDataPath();
         string file = "";
 
-        StreamWriter w;
-        FileInfo f = new FileInfo(currentPath + "/test.txt");
-        if (f.Exists)
-            f.Delete();
-        w = f.CreateText();
-        w.WriteLine(currentPath);
-        w.Close();
-
         file = currentPath + path;
 
         StreamReader reader = new StreamReader(file, Encoding.Default);
@@ -56,11 +48,28 @@ public static class Museum
         }
     }
 
+    private static void test()
+    {
+        string currentPath = Application.persistentDataPath;
+
+        StreamWriter w;
+        FileInfo f = new FileInfo(currentPath + "/test.txt");
+        if (f.Exists)
+            f.Delete();
+        w = f.CreateText();
+        w.WriteLine(currentPath);
+        w.Close();
+
+        StreamReader reader = new StreamReader(currentPath + "/test.txt", Encoding.Default);
+        using (reader)
+        {
+            Debug.LogError(reader.ReadToEnd());
+        }
+    }
+
     private static string getDataPath()
     {
-        string path = Application.persistentDataPath + "/data";
-        path = path.Replace("data/data", "Android/data");
-        return path;
+        return Application.persistentDataPath + "/data";
     }
 
     public static Floor CurrentFloor
