@@ -7,7 +7,7 @@ public class Initialize : MonoBehaviour {
 	// Use this for initialization
 	void Start()
     {
-        Museum.Load("/Setups/1.txt");
+        Museum.Load("\\setup.txt");
         SceneManager.LoadScene("Scenes/Hallway");
 	}
 }

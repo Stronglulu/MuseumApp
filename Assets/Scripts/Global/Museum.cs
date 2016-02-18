@@ -14,18 +14,18 @@ public static class Museum
     {
         floors = new List<Floor>();
 
+        string currentPath = getDataPath();
         string file = "";
 
-        if (Application.platform == RuntimePlatform.Android)
-        {
-            // TODO: Find text file on Android.
-        }
-        else
-        {
-            string currentPath = Application.dataPath;
-            file = currentPath + path;
-        }
+        StreamWriter w;
+        FileInfo f = new FileInfo(currentPath + "/test.txt");
+        if (f.Exists)
+            f.Delete();
+        w = f.CreateText();
+        w.WriteLine(currentPath);
+        w.Close();
 
+        file = currentPath + path;
 
         StreamReader reader = new StreamReader(file, Encoding.Default);
         string line;
@@ -54,6 +54,13 @@ public static class Museum
             }
             while (line != null);
         }
+    }
+
+    private static string getDataPath()
+    {
+        string path = Application.persistentDataPath + "/data";
+        path = path.Replace("data/data", "Android/data");
+        return path;
     }
 
     public static Floor CurrentFloor
