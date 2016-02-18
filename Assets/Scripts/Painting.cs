@@ -10,6 +10,11 @@ public class Painting : MonoBehaviour
     {
         rend = GetComponent<Renderer>();
 
+        if (paintingName == "")
+        {
+            paintingName = Museum.CurrentFloor.CurrentRoom.painting;
+        }
+
         LoadMaterial();
         ScaleObject();
     }

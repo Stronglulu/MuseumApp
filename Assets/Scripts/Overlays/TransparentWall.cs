@@ -9,7 +9,7 @@ public class TransparentWall : Overlay {
 
 
 	// Use this for initialization
-    void Start()
+    new void Start()
     {
         base.Start();
         //color = rend.material.color;

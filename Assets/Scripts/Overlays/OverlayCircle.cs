@@ -6,7 +6,7 @@ public class OverlayCircle : Overlay
 {
     protected Vector2 initialScale;
 
-    void Start()
+    new void Start()
     {
         rend = GetComponent<Renderer>();
         function = new WaveFunction();

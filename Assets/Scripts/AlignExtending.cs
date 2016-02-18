@@ -7,18 +7,19 @@ public class AlignExtending : MonoBehaviour
     public Painting painting;
 
     private Renderer rend;
+    private bool loaded = false;
 
 	void Start()
     {
         rend = GetComponent<Renderer>();
 
-        LoadMaterial();
 	}
 	
 	void Update()
     {
         // This is called in update to ensure the painting object is already initialized.
-        ScaleTexture();
+        if (!loaded)
+            LoadMaterial();
 	}
 
     // Loads the extension material.
@@ -30,6 +31,9 @@ public class AlignExtending : MonoBehaviour
         {
             Material material = Resources.Load("Materials/Illusions/Extending/" + paintingName, typeof(Material)) as Material;
             rend.material = material;
+
+            ScaleTexture();
+            loaded = true;
         }
     }
 
