@@ -13,7 +13,7 @@ public static class Museum
         // Load floors/rooms.
         List<Room> rooms1 = new List<Room>();
         rooms1.Add(new Room("ForestR1", "Extending"));
-        rooms1.Add(new Room("SeaR1", "Extending"));
+        rooms1.Add(new Room("SeaR1", "None"));
         rooms1.Add(new Room("WinterR1", "Extending"));
 
         floors = new List<Floor>();

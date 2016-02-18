@@ -8,8 +8,9 @@ public class Button : MonoBehaviour
 
     protected string nextScene;
     protected float timer, scale;
-    protected Material barBGMat, barSelectedMat;
+    protected Material barBGMat, barSelectedMat, barInactiveMat;
     protected GameObject progressBar;
+    protected TextMesh text;
 
     private CardboardHead head;
 
@@ -22,9 +23,11 @@ public class Button : MonoBehaviour
     {
         head = Camera.main.GetComponent<StereoController>().Head;
         timer = 0;
-        barBGMat = Resources.Load("Materials/barBG") as Material;
-        barSelectedMat = Resources.Load("Materials/barSelected") as Material;
+        barBGMat = Resources.Load("Materials/BarBG") as Material;
+        barSelectedMat = Resources.Load("Materials/BarSelected") as Material;
+        barInactiveMat = Resources.Load("Materials/BarInactive") as Material;
         progressBar = transform.parent.FindChild("Bar Progress Pivot").gameObject;
+        text = transform.parent.FindChild("Text").GetComponent<TextMesh>();
     }
 	
 	void Update()
@@ -47,8 +50,16 @@ public class Button : MonoBehaviour
         }
         else
         {
-            //this.GetComponent<SpriteRenderer>().color = Color.white;
-            this.GetComponent<Renderer>().material = barBGMat;
+            if (IsActive())
+            {
+                GetComponent<Renderer>().material = barBGMat;
+                text.color = Color.white;
+            }
+            else
+            {
+                GetComponent<Renderer>().material = barInactiveMat;
+                text.color = new Color(0, 0, 0, 0);
+            }
             progressBar.transform.localScale = new Vector3(0, 0.01f, 1);
             timer = 0;
         }
