@@ -12,7 +12,7 @@ public class HallwayButton : Button
         Floor floor = Museum.CurrentFloor;
 
         // This button isn't needed.
-        if (buttonIndex >= floor.rooms.Count)
+        if (buttonIndex > floor.rooms.Count)
         {
             Destroy(transform.parent.gameObject);
         }

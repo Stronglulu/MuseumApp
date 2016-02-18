@@ -18,7 +18,10 @@ public class Floor
     {
         get
         {
-            return rooms[currentRoom];
+            if (currentRoom > 0)
+                return rooms[currentRoom - 1];
+            else
+                return null;
         }
     }
 }
