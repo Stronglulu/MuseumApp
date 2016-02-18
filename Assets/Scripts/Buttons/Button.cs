@@ -38,14 +38,13 @@ public class Button : MonoBehaviour
         {
             this.GetComponent<Renderer>().material = barSelectedMat;
             scale = (5f / loadTime) * timer;
-            Debug.Log(scale + " " + timer);
             progressBar.transform.localScale = new Vector3(scale, 0.01f, 1);
             timer += Time.deltaTime;
 
             if (timer > loadTime)
             {
-                SceneManager.LoadScene(nextScene);
                 OnNextScene();
+                SceneManager.LoadScene(nextScene);
             }
         }
         else

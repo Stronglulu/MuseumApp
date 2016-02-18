@@ -15,9 +15,16 @@ public static class Museum
         rooms1.Add(new Room("ForestR1", "Extending"));
         rooms1.Add(new Room("SeaR1", "None"));
         rooms1.Add(new Room("WinterR1", "Extending"));
+        List<Room> rooms2 = new List<Room>();
+        rooms2.Add(new Room("ForestS1", "Extending"));
+        rooms2.Add(new Room("ForestS2", "Extending"));
+        rooms2.Add(new Room("SeaS1", "None"));
 
         floors = new List<Floor>();
+        floors.Add(Floor.Empty);
         floors.Add(new Floor(rooms1));
+        floors.Add(new Floor(rooms2));
+        floors.Add(Floor.Empty);
     }
 
     public static Floor CurrentFloor
@@ -33,6 +40,9 @@ public static class Museum
     {
         get
         {
+            // Can't continue on last floor.
+            if (currentFloor == floors.Count - 1)
+                return false;
             foreach (Room room in CurrentFloor.rooms)
             {
                 if (!room.visited)

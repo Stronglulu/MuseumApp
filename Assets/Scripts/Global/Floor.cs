@@ -14,6 +14,14 @@ public class Floor
         this.rooms = rooms;
     }
 
+    public static Floor Empty
+    {
+        get
+        {
+            return new Floor(new List<Room>());
+        }
+    }
+
     public Room CurrentRoom
     {
         get
