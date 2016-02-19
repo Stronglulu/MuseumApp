@@ -21,6 +21,10 @@ public class HallwayButton : Button
         {
             Room room = floor.rooms[buttonIndex - 1];
             nextScene = "Scenes/" + room.effect;
+
+            GameObject icon = transform.Find("Icon").gameObject;
+            Renderer iconRenderer = icon.GetComponent<Renderer>();
+            iconRenderer.material = Resources.Load<Material>("Materials/Icon" + room.effect);
         }
 	}
 
