@@ -30,6 +30,6 @@ public class HallwayButton : Button
 
     public override void OnNextScene()
     {
-        Museum.CurrentFloor.ToRoom(buttonIndex);
+        Museum.ToRoom(buttonIndex);
     }
 }

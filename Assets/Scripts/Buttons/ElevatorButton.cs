@@ -5,7 +5,7 @@ public class ElevatorButton : BackButton
 {
     public override void OnNextScene()
     {
-        Museum.CurrentFloor.ToRoom(0);
+        Museum.ToRoom(0, false);
         Museum.ToNextFloor();
     }
 

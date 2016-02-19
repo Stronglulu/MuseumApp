@@ -6,17 +6,20 @@ using System.Text;
 
 public static class Museum
 {
-    public static List<Floor> floors;
+    private static List<Floor> floors;
     // The current floor (starts at 0).
-    public static int currentFloor = 0;
+    private static int currentFloor = 0;
 
-    public static void Load(string path)
+    private static string logFilePath;
+
+    public static void Load(string setupPath, string logPath)
     {
+        string currentPath = getDataPath();
+
         floors = new List<Floor>();
 
-        string currentPath = getDataPath();
-        string file = currentPath + path;
-
+        // Load museum.
+        string file = currentPath + setupPath;
         string line;
         using (StreamReader reader = new StreamReader(file))
         {
@@ -42,6 +45,15 @@ public static class Museum
                 }
             }
             while (line != null);
+
+            // Create logging file.
+            logFilePath = currentPath + logPath;
+            FileInfo f = new FileInfo(logFilePath);
+            if (f.Exists)
+                f.Delete();
+            StreamWriter logger = f.CreateText();
+            logger.WriteLine("t,fromFloor,toFloor,fromRoom,toRoom");
+            logger.Close();
         }
     }
 
@@ -78,9 +90,29 @@ public static class Museum
         }
     }
 
+    public static void ToRoom(int room, bool log = true)
+    {
+        int fromRoom = CurrentFloor.currentRoom;
+        CurrentFloor.ToRoom(room);
+
+        if (log)
+            Log(Time.time, currentFloor, currentFloor, fromRoom, room);
+    }
+
     public static void ToNextFloor()
     {
+        int fromFloor = currentFloor;
+        int fromRoom = CurrentFloor.currentRoom;
         if (currentFloor < floors.Count - 1)
             currentFloor++;
+
+        Log(Time.time, fromFloor, currentFloor, fromRoom, CurrentFloor.currentRoom);
+    }
+
+    public static void Log(float t, int fromFloor, int toFloor, int fromRoom, int toRoom)
+    {
+        StreamWriter logger = new StreamWriter(logFilePath, true);
+        logger.WriteLine(t + "," + fromFloor + "," + toFloor + "," + fromRoom + "," + toRoom + "");
+        logger.Close();
     }
 }
