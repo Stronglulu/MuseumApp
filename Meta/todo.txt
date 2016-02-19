@@ -1,0 +1,19 @@
+- app:
+	- loggen van tijd (tijd, deur)
+	- camera rotation
+	- icons
+	- stylized fixen
+	- extending repeat button 
+	- loggen gebruik repeat button
+
+- setup files
+
+- interviews/questionnaires
+	- general revisen
+	- informal questions
+	- panas
+	- enjoyment likert
+	- general after test
+	- memory
+
+- testen
