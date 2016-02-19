@@ -1,7 +1,8 @@
 - app:
 	- loggen van tijd (tijd, deur)
-	- camera rotation
-	- icons
+	x camera rotation
+	x icons (implementation)
+	- icons (images)
 	- stylized fixen
 	- extending repeat button 
 	- loggen gebruik repeat button
