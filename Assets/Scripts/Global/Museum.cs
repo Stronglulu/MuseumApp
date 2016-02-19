@@ -83,13 +83,4 @@ public static class Museum
         if (currentFloor < floors.Count - 1)
             currentFloor++;
     }
-
-    public static void ToRoom(int room)
-    {
-        CurrentFloor.currentRoom = room;
-
-        // Mark room as visited.
-        if (room > 0)
-            CurrentFloor.rooms[room - 1].visited = true;
-    }
 }

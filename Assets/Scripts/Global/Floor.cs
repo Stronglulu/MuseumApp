@@ -8,18 +8,11 @@ public class Floor
 
     // The current room. 0 = hallway, 1-3 = painting rooms.
     public int currentRoom = 0;
+    public int previousRoom = 0;
 
     public Floor(List<Room> rooms)
     {
         this.rooms = rooms;
-    }
-
-    public static Floor Empty
-    {
-        get
-        {
-            return new Floor(new List<Room>());
-        }
     }
 
     public Room CurrentRoom
@@ -30,6 +23,18 @@ public class Floor
                 return rooms[currentRoom - 1];
             else
                 return null;
+        }
+    }
+
+    public void ToRoom(int room)
+    {
+        previousRoom = currentRoom;
+        currentRoom = room;
+
+        if (room > 0)
+        {
+            // Mark room as visited.
+            rooms[room - 1].visited = true;
         }
     }
 }

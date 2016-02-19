@@ -9,7 +9,7 @@ public class OverlayCircle : Overlay
     new void Start()
     {
         rend = GetComponent<Renderer>();
-        function = new WaveFunction();
+        function = new WaveOnceFunction();
 
         ScaleTexture();
     }

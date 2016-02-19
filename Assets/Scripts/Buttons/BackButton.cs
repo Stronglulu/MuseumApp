@@ -12,6 +12,6 @@ public class BackButton : Button
 
     public override void OnNextScene()
     {
-        Museum.ToRoom(0);
+        Museum.CurrentFloor.ToRoom(0);
     }
 }
