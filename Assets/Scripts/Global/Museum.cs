@@ -15,13 +15,10 @@ public static class Museum
         floors = new List<Floor>();
 
         string currentPath = getDataPath();
-        string file = "";
+        string file = currentPath + path;
 
-        file = currentPath + path;
-
-        StreamReader reader = new StreamReader(file, Encoding.Default);
         string line;
-        using (reader)
+        using (StreamReader reader = new StreamReader(file))
         {
             List<Room> rooms = new List<Room>();
 
@@ -48,28 +45,12 @@ public static class Museum
         }
     }
 
-    private static void test()
+    public static string getDataPath()
     {
-        string currentPath = Application.persistentDataPath;
-
-        StreamWriter w;
-        FileInfo f = new FileInfo(currentPath + "/test.txt");
-        if (f.Exists)
-            f.Delete();
-        w = f.CreateText();
-        w.WriteLine(currentPath);
-        w.Close();
-
-        StreamReader reader = new StreamReader(currentPath + "/test.txt", Encoding.Default);
-        using (reader)
-        {
-            Debug.LogError(reader.ReadToEnd());
-        }
-    }
-
-    private static string getDataPath()
-    {
-        return Application.persistentDataPath + "/data";
+        if (Application.platform == RuntimePlatform.Android)
+            return "/storage/emulated/0/SP/data";
+        else
+            return Application.persistentDataPath + "/data";
     }
 
     public static Floor CurrentFloor
