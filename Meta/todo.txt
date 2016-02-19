@@ -1,11 +1,11 @@
 - app:
-	- loggen van tijd (tijd, deur)
+	x loggen van tijd (tijd, deur)
 	x camera rotation
 	x icons (implementation)
 	- icons (images)
 	- stylized fixen
-	- extending repeat button 
-	- loggen gebruik repeat button
+	x extending repeat button 
+	x loggen gebruik repeat button
 
 - setup files
 

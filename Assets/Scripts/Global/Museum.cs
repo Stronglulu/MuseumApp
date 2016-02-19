@@ -52,7 +52,7 @@ public static class Museum
             if (f.Exists)
                 f.Delete();
             StreamWriter logger = f.CreateText();
-            logger.WriteLine("t,fromFloor,toFloor,fromRoom,toRoom");
+            logger.WriteLine("t,event,fromFloor,toFloor,fromRoom,toRoom");
             logger.Close();
         }
     }
@@ -96,7 +96,7 @@ public static class Museum
         CurrentFloor.ToRoom(room);
 
         if (log)
-            Log(Time.time, currentFloor, currentFloor, fromRoom, room);
+            Log(Time.time, "to_room", currentFloor, currentFloor, fromRoom, room);
     }
 
     public static void ToNextFloor()
@@ -106,13 +106,19 @@ public static class Museum
         if (currentFloor < floors.Count - 1)
             currentFloor++;
 
-        Log(Time.time, fromFloor, currentFloor, fromRoom, CurrentFloor.currentRoom);
+        Log(Time.time, "next_floor", fromFloor, currentFloor, fromRoom, CurrentFloor.currentRoom);
     }
 
-    public static void Log(float t, int fromFloor, int toFloor, int fromRoom, int toRoom)
+    public static void Log(float t, string ev, int fromFloor = -1, int toFloor = -1, int fromRoom = -1, int toRoom = -1)
     {
         StreamWriter logger = new StreamWriter(logFilePath, true);
-        logger.WriteLine(t + "," + fromFloor + "," + toFloor + "," + fromRoom + "," + toRoom + "");
+        logger.WriteLine(
+            t
+            + "," + ev
+            + "," + (fromFloor == -1 ? currentFloor : fromFloor)
+            + "," + (toFloor == -1 ? currentFloor : toFloor)
+            + "," + (fromRoom == -1 ? CurrentFloor.currentRoom : fromRoom)
+            + "," + (toRoom == -1 ? CurrentFloor.currentRoom : toRoom));
         logger.Close();
     }
 }

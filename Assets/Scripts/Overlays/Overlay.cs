@@ -4,9 +4,9 @@ using System.Collections;
 public class Overlay : MonoBehaviour
 {
     public float animationTime = 1;
+    public float t;
 
     protected Renderer rend;
-    protected float t;
     protected Function function;
 
     protected void Start()
