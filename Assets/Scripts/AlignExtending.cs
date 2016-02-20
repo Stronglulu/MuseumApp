@@ -7,33 +7,24 @@ public class AlignExtending : MonoBehaviour
     public Painting painting;
 
     private Renderer rend;
-    private bool loaded = false;
 
 	void Start()
     {
         rend = GetComponent<Renderer>();
-
-	}
-	
-	void Update()
-    {
-        // This is called in update to ensure the painting object is already initialized.
-        if (!loaded)
-            LoadMaterial();
+        LoadMaterial();
 	}
 
     // Loads the extension material.
     void LoadMaterial()
     {
         // Use the name of the painting.
-        string paintingName = painting.paintingName;
+        string paintingName = Museum.CurrentFloor.CurrentRoom.painting;
         if (paintingName != "")
         {
             Material material = Resources.Load("Materials/Illusions/Extending/" + paintingName, typeof(Material)) as Material;
             rend.material = material;
 
             ScaleTexture();
-            loaded = true;
         }
     }
 
