@@ -14,7 +14,7 @@ public class ResetButton : MonoBehaviour
     {
         head = Camera.main.GetComponent<StereoController>().Head;
         overlay = overlayObject.GetComponent<Overlay>();
-        matIdle = Resources.Load<Material>("Materials/BarBG");
+        matIdle = Resources.Load<Material>("Materials/BarInactive");
         matActive = Resources.Load<Material>("Materials/BarProgress");
     }
 
