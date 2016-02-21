@@ -2,8 +2,8 @@
 	x loggen van tijd (tijd, deur)
 	x camera rotation
 	x icons (implementation)
-	- icons (images)
-	- stylized fixen
+	x icons (images)
+	x stylized fixen
 	x extending repeat button 
 	x loggen gebruik repeat button
 

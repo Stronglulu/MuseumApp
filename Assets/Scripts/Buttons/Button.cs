@@ -12,7 +12,7 @@ public class Button : MonoBehaviour
     protected GameObject progressBar;
     protected TextMesh text;
 
-    private CardboardHead head;
+    protected CardboardHead head;
 
 	void Start()
     {
