@@ -1,0 +1,83 @@
+prevent log files from ovewriting themselves, append or create new log files
+
+
+
+
+
+
+
+learn to adjust hmd, quickly and well
+
+when i get out i immidiatly get in the other room
+doors and lift doors are activated too quickly -> 2 sec
+button on the floor include progress, might be fast
+
+realistic + stylized -> difference too small?
+
+file write time when loading scene = delay
+
+find a way to prevent from accidentaly aenter the room
+
+put a delay after you just get out of the elevator, put a general 2 sec delay
+
+mark doors after they have been visited
+
+lock the doors during tutorial
+
+put: "please take of your headset" on the wall in the empty room after the tutorial
+
+
+QUESTIONNAIRES
+6: create options for how often you visit museums
+9: exclude the question from the beginning, and place in after in the informal
+
+tut.instr
+admire or look at?
+if you want to see it again, there is a button on the floor but you don't have to if you just want to look at the art.
+exmplain the loop and that is no button
+
+
+informal:
+-the rooms -> type of rooms
+- which one did you like the most/the least (including 3 incons)
+place q 9 here?
+interest in vr museum after tut
+
+real experiment -> 2nd part of the 
+dont call it tutorial anymore, 
+visit each rooms as often...
+switch order of the senctences
+1- 3-2-4
+
+Explore instruction
+reassure them, dont interrupt them, let them take their time, but if you have questions you can always ask them
+
+Panas:
+make the circles more clear
+check panas again on theorder of the words
+maybe dont include informal panas? 
+
+place enjoyment questionnaire before panas
+
+informal 2
+ask about vr museums app and real museums
+dont ask after innitial test
+
+at then end:
+tell the not to tell others about the memory test
+
+
+
+
+think about typing or writing
+
+
+information to the user:
+we use vr to do special things that can only be done there and see if people like it.
+
+to five the users the same base knowledge:
+tell the user that the effects are made by computer/algorithm before 2nd test
+tell them how it works when they see the effect (during tutorial)
+commputer generated + name of the algorithm
+
+explain progress bar
