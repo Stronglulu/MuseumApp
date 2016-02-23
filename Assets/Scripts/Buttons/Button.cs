@@ -4,14 +4,14 @@ using UnityEngine.SceneManagement;
 
 public class Button : MonoBehaviour
 {
-    public float loadTime;
+    public float loadTime = 2f;
+    protected float delayTime = 1.5f;
 
     protected string nextScene;
     protected float timer, scale;
     protected Material barBGMat, barSelectedMat, barInactiveMat;
     protected GameObject progressBar;
     protected TextMesh text;
-    protected float delayTime = 1.5f;
     protected float t = 0;
 
     protected CardboardHead head;

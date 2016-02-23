@@ -10,27 +10,26 @@ think about typing or writing
 *Application Changes*
 Logs
 X prevent log files from ovewriting themselves, append or create new log files
-- file write time when loading scene = delay
+X file write time when loading scene = delay
 
 Overgang als je een scene laads
 
 Doors
-- put a delay after you just get out of the elevator, put a general 2 sec delay
-- find a way to prevent from accidentaly aenter the room (1 - 2 second delay on buttons after loading scene)
+X put a delay after you just get out of the elevator, put a general 2 sec delay
+X find a way to prevent from accidentaly aenter the room (1 - 2 second delay on buttons after loading scene)
 - lock the doors during tutorial
 X mark doors after they have been visited
 
 Other
-put: "please take of your headset" on the wall in the empty room after the tutorial
-Same for end room
+X put: "please take of your headset" on the wall in the empty room after the tutorial
+X Same for end room
 
 
 *Application settings*
 
-when i get out i immidiatly get in the other room
-doors and lift doors are activated too quickly -> 2 sec
+- when i get out i immidiatly get in the other room doors and lift doors are activated too quickly -> 2 sec
 
-button on the floor include progress, might be fast
+- button on the floor include progress, might be fast
 
 
 *Questionnaire & interview changes*
