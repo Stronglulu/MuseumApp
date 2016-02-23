@@ -73,8 +73,9 @@ reassure them, dont interrupt them, let them take their time, but if you have qu
 Panas / enjoyment
 place enjoyment questionnaire before panas
 - make the circles more clear
-- check panas again on theorder of the words
-- check panas again on whether they interview or not
+X check panas again on theorder of the words: They mixed the words: 'arrayed in various orders'
+X check panas again on whether they interview or not: they did not conduct an interview
+X     extra comments: they did not test the time period 'during the test', only 'right now' and 'today', however their results seem stable for a lot of different time periods.       
 maybe dont include informal panas? 
 
 informal 2
