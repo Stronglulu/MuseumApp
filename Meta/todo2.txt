@@ -12,6 +12,8 @@ Logs
 - prevent log files from ovewriting themselves, append or create new log files
 - file write time when loading scene = delay
 
+Overgang als je een scene laads
+
 Doors
 - put a delay after you just get out of the elevator, put a general 2 sec delay
 - find a way to prevent from accidentaly aenter the room (1 - 2 second delay on buttons after loading scene)
