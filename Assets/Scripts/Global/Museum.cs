@@ -6,7 +6,7 @@ using System.Text;
 
 public static class Museum
 {
-    private static List<Floor> floors;
+    public static List<Floor> floors;
     // The current floor (starts at 0).
     public static int currentFloor = 0;
 

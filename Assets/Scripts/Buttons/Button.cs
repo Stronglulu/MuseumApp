@@ -57,7 +57,7 @@ public class Button : MonoBehaviour
             if (IsActive())
             {
                 GetComponent<Renderer>().material = barBGMat;
-                text.color = Color.white;
+                text.color = Color.black;
             }
             else
             {
