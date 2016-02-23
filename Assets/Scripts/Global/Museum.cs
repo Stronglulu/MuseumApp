@@ -20,7 +20,7 @@ public static class Museum
 
         // Load museum.
         string file = currentPath + setupPath;
-        string line;
+        string line, hallwayText = "";
         using (StreamReader reader = new StreamReader(file))
         {
             List<Room> rooms = new List<Room>();
@@ -36,12 +36,16 @@ public static class Museum
                     // Empty line marks end of floor.
                     if (line.Length == 0)
                     {
-                        floors.Add(new Floor(rooms));
+                        floors.Add(new Floor(rooms, hallwayText));
                         rooms = new List<Room>();
                     }
                     // Two words marks a room.
                     else if (words.Length == 2)
                         rooms.Add(new Room(words[0], words[1]));
+                    else if (words.Length == 1)
+                        hallwayText = HallwayText(words[0]);
+                    else
+                        hallwayText = "";
                 }
             }
             while (line != null);
@@ -54,6 +58,19 @@ public static class Museum
             StreamWriter logger = f.CreateText();
             logger.WriteLine("t,event,fromFloor,toFloor,fromRoom,toRoom");
             logger.Close();
+        }
+    }
+
+    private static string HallwayText(string roomType)
+    {
+        switch (roomType)
+        {
+            case "MIDDLE":
+                return "Please take off your headset.";
+            case "END":
+                return "End of application.\nPlease take off your headset.";
+            default:
+                return "";
         }
     }
 

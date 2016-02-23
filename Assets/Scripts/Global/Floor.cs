@@ -10,9 +10,12 @@ public class Floor
     public int currentRoom = 0;
     public int previousRoom = 0;
 
-    public Floor(List<Room> rooms)
+    public string text;
+
+    public Floor(List<Room> rooms, string text = "")
     {
         this.rooms = rooms;
+        this.text = text;
     }
 
     public Room CurrentRoom

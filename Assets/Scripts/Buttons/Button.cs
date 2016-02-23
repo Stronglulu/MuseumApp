@@ -11,6 +11,8 @@ public class Button : MonoBehaviour
     protected Material barBGMat, barSelectedMat, barInactiveMat;
     protected GameObject progressBar;
     protected TextMesh text;
+    protected float delayTime = 2f;
+    protected float t = 0;
 
     protected CardboardHead head;
 
@@ -32,6 +34,9 @@ public class Button : MonoBehaviour
 	
 	void Update()
     {
+        // Update time.
+        t += Time.deltaTime;
+
         RaycastHit hit;
         bool isLookedAt = GetComponent<Collider>().Raycast(head.Gaze, out hit, Mathf.Infinity);
         if (isLookedAt && IsActive())
@@ -68,11 +73,6 @@ public class Button : MonoBehaviour
 
     public virtual bool IsActive()
     {
-        return true;
-    }
-
-    void OnGUI()
-    {
-
+        return t > delayTime;
     }
 }

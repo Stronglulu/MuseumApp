@@ -18,7 +18,6 @@ public class Initialize : MonoBehaviour
         {
             logNr++;
             logPath = "/log" + (logNr) + ".csv";
-            Debug.Log(dataPath + logPath);
         }
 
         Museum.Load("/setup.txt", logPath);

@@ -12,7 +12,7 @@ public class ElevatorButton : BackButton
 
     public override bool IsActive()
     {
-        return Museum.CanContinue;
+        return base.IsActive() && Museum.CanContinue;
     }
 
     public override void Load()

@@ -9,7 +9,7 @@ think about typing or writing
 
 *Application Changes*
 Logs
-- prevent log files from ovewriting themselves, append or create new log files
+X prevent log files from ovewriting themselves, append or create new log files
 - file write time when loading scene = delay
 
 Doors
