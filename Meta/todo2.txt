@@ -1,6 +1,7 @@
 *General*
 
-- learn to adjust hmd, quickly and well
+X learn to adjust hmd, quickly and well
+   X 2 ringetjes van de schroefdraad zichtbaar
 
 - realistic + stylized -> difference too small?
 
@@ -10,15 +11,21 @@
 *Application Changes*
 Logs
 X prevent log files from ovewriting themselves, append or create new log files
-X file write time when loading scene = delay
+- file write time when loading scene = delay
+- write setup number
 
-- Overgang als je een scene laads
+- Overgang als je een scene laad
 
 Doors
 X put a delay after you just get out of the elevator, put a general 2 sec delay
 X find a way to prevent from accidentaly aenter the room (1 - 2 second delay on buttons after loading scene)
 - lock the doors during tutorial
 X mark doors after they have been visited
+- number above elevator
+
+Other button
+- laadbalk voor extending button
+- laadtijd (kort), evt nog delay maar volgens mij zie je het begin vd cirkel sowieso niet omdat ie achter het schilderij begint
 
 Other
 X put: "please take of your headset" on the wall in the empty room after the tutorial
@@ -28,8 +35,6 @@ X Same for end room
 *Application settings*
 
 X when i get out i immidiatly get in the other room doors and lift doors are activated too quickly -> 2 sec
-
-- button on the floor include progress, might be fast
 
 
 *Questionnaire & interview changes*
