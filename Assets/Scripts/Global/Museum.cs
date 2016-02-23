@@ -19,11 +19,17 @@ public static class Museum
         floors = new List<Floor>();
 
         // Load museum.
+        string setupNumber;
         string file = currentPath + setupPath;
         string line, hallwayText = "";
         using (StreamReader reader = new StreamReader(file))
         {
             List<Room> rooms = new List<Room>();
+
+            // Setup number (first two lines).
+            line = reader.ReadLine();
+            setupNumber = line;
+            reader.ReadLine();
 
             do
             {
@@ -55,6 +61,8 @@ public static class Museum
             if (f.Exists)
                 f.Delete();
             StreamWriter logger = f.CreateText();
+            logger.WriteLine(setupNumber);
+            logger.WriteLine();
             logger.WriteLine("t,event,fromFloor,toFloor,fromRoom,toRoom");
             logger.Close();
         }
@@ -127,14 +135,20 @@ public static class Museum
 
     public static void Log(float t, string ev, int fromFloor = -1, int toFloor = -1, int fromRoom = -1, int toRoom = -1)
     {
-        StreamWriter logger = new StreamWriter(logFilePath, true);
-        logger.WriteLine(
+        LogPlain(
             t
             + "," + ev
             + "," + (fromFloor == -1 ? currentFloor : fromFloor)
             + "," + (toFloor == -1 ? currentFloor : toFloor)
             + "," + (fromRoom == -1 ? CurrentFloor.currentRoom : fromRoom)
-            + "," + (toRoom == -1 ? CurrentFloor.currentRoom : toRoom));
+            + "," + (toRoom == -1 ? CurrentFloor.currentRoom : toRoom)
+            );
+    }
+
+    public static void LogPlain(string s)
+    {
+        StreamWriter logger = new StreamWriter(logFilePath, true);
+        logger.WriteLine(s);
         logger.Close();
     }
 }

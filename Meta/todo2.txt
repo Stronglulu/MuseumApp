@@ -12,7 +12,7 @@ X learn to adjust hmd, quickly and well
 Logs
 X prevent log files from ovewriting themselves, append or create new log files
 - file write time when loading scene = delay
-- write setup number
+X write setup number
 
 - Overgang als je een scene laad
 
@@ -21,7 +21,7 @@ X put a delay after you just get out of the elevator, put a general 2 sec delay
 X find a way to prevent from accidentaly aenter the room (1 - 2 second delay on buttons after loading scene)
 X lock the doors during tutorial
 X mark doors after they have been visited
-- number above elevator
+X number above elevator
 
 Other button
 - laadbalk voor extending button
