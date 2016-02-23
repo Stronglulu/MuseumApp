@@ -1,10 +1,10 @@
 *General*
 
-learn to adjust hmd, quickly and well
+- learn to adjust hmd, quickly and well
 
-realistic + stylized -> difference too small?
+- realistic + stylized -> difference too small?
 
-think about typing or writing
+- think about typing or writing
 
 
 *Application Changes*
@@ -12,7 +12,7 @@ Logs
 X prevent log files from ovewriting themselves, append or create new log files
 X file write time when loading scene = delay
 
-Overgang als je een scene laads
+- Overgang als je een scene laads
 
 Doors
 X put a delay after you just get out of the elevator, put a general 2 sec delay
@@ -27,7 +27,7 @@ X Same for end room
 
 *Application settings*
 
-- when i get out i immidiatly get in the other room doors and lift doors are activated too quickly -> 2 sec
+X when i get out i immidiatly get in the other room doors and lift doors are activated too quickly -> 2 sec
 
 - button on the floor include progress, might be fast
 
