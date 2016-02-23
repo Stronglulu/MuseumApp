@@ -38,14 +38,13 @@ public static class Museum
                     {
                         floors.Add(new Floor(rooms, hallwayText));
                         rooms = new List<Room>();
+                        hallwayText = "";
                     }
                     // Two words marks a room.
                     else if (words.Length == 2)
                         rooms.Add(new Room(words[0], words[1]));
                     else if (words.Length == 1)
                         hallwayText = HallwayText(words[0]);
-                    else
-                        hallwayText = "";
                 }
             }
             while (line != null);

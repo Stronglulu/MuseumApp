@@ -11,7 +11,7 @@ public class Button : MonoBehaviour
     protected Material barBGMat, barSelectedMat, barInactiveMat;
     protected GameObject progressBar;
     protected TextMesh text;
-    protected float delayTime = 2f;
+    protected float delayTime = 1.5f;
     protected float t = 0;
 
     protected CardboardHead head;
