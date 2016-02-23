@@ -5,7 +5,7 @@ public class HallwayButton : Button
 {
     public int buttonIndex;
 
-	void Start()
+    void Start()
     {
         Load();
 
@@ -33,10 +33,21 @@ public class HallwayButton : Button
                 checkmarkRenderer.material = Resources.Load<Material>("Materials/Checkmark");
             }
         }
-	}
+    }
 
     public override void OnNextScene()
     {
         Museum.ToRoom(buttonIndex);
+    }
+
+    public override bool IsActive()
+    {
+        // Tutorial floor unlocking.
+        if (Museum.currentFloor == 1)
+            for (int i = 0; i < buttonIndex - 1; i++)
+                if (!Museum.CurrentFloor.rooms[i].visited)
+                    return false;
+
+        return base.IsActive();
     }
 }

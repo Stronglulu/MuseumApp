@@ -19,7 +19,7 @@ X prevent log files from ovewriting themselves, append or create new log files
 Doors
 X put a delay after you just get out of the elevator, put a general 2 sec delay
 X find a way to prevent from accidentaly aenter the room (1 - 2 second delay on buttons after loading scene)
-- lock the doors during tutorial
+X lock the doors during tutorial
 X mark doors after they have been visited
 - number above elevator
 
