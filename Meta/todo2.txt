@@ -81,12 +81,12 @@ place enjoyment questionnaire before panas
 - make the circles more clear
 X check panas again on theorder of the words: They mixed the words: 'arrayed in various orders'
 X check panas again on whether they interview or not: they did not conduct an interview
-X     extra comments: they did not test the time period 'during the test', only 'right now' and 'today', however their results seem stable for a lot of different time periods.       
+X extra comments: they did not test the time period 'during the test', only 'right now' and 'today', however their results seem stable for a lot of different time periods.
 maybe dont include informal panas? 
 
 informal 2
-ask about vr museums app and real museums
-dont ask after initial test (in informal 1)
+- ask about vr museums app and real museums
+- dont ask after initial test (in informal 1)
 
 at then end:
-tell the not to tell others about the memory test
+X tell the not to tell others about the memory test
