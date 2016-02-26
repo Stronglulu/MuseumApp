@@ -72,6 +72,8 @@ public static class Museum
     {
         switch (roomType)
         {
+            case "EMPTY":
+                return "Please adjust your headset.";
             case "MIDDLE":
                 return "Please take off your headset.";
             case "END":
