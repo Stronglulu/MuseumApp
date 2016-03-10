@@ -18,7 +18,7 @@ public class ResetButton : MonoBehaviour
     void Start()
     {
         head = Camera.main.GetComponent<StereoController>().Head;
-        overlay = overlayObject.GetComponent<Overlay>();
+        //overlay = overlayObject.GetComponent<Overlay>();
         progressBar = transform.parent.FindChild("Bar Progress Pivot").gameObject;
         text = transform.parent.FindChild("Text").GetComponent<TextMesh>();
     }
@@ -49,7 +49,7 @@ public class ResetButton : MonoBehaviour
                 t = 0;
                 text.text = "LookUp";
 
-                overlay.t = 0;
+                //overlay.t = 0;
                 Museum.Log(Time.time, "replay_extending");
             }
         }

@@ -21,8 +21,8 @@ public class AlignExtending : MonoBehaviour
         string paintingName = Museum.CurrentFloor.CurrentRoom.painting;
         if (paintingName != "")
         {
-            Material material = Resources.Load("Materials/Illusions/Extending/" + paintingName, typeof(Material)) as Material;
-            rend.material = material;
+            //Material material = Resources.Load("Materials/Illusions/Extending/" + paintingName, typeof(Material)) as Material;
+            //rend.material = material;
 
             ScaleTexture();
         }
