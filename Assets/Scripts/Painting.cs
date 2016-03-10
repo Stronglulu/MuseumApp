@@ -24,7 +24,7 @@ public class Painting : MonoBehaviour
     {
         if (paintingName != "")
         {
-            Material material = Resources.Load("Materials/Paintings/" + paintingName, typeof(Material)) as Material;
+            Material material = Resources.Load("Materials/WeatherPaintings/" + paintingName, typeof(Material)) as Material;
             rend.material = material;
         }
     }

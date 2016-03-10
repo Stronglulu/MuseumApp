@@ -8,7 +8,7 @@ public static class Museum
 {
     public static List<Floor> floors;
     // The current floor (starts at 0).
-    public static int currentFloor = 5;
+    public static int currentFloor = 0;
 
     private static string logFilePath;
 

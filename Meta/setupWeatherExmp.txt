@@ -1,0 +1,28 @@
+1
+
+EMPTY
+
+WS2 None
+
+WS2 Snow
+RS2 Rain
+FS2 Leaf
+
+MIDDLE
+
+RS1 Rain
+FS1 Leaf
+WS1 Snow
+
+MIDDLE
+
+FR2 Leaf
+WR2 Snow
+RR2 Rain
+
+WR1 Snow
+RR1 Rain
+FR1 Leaf
+
+END
+
