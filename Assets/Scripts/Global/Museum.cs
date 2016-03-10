@@ -54,17 +54,6 @@ public static class Museum
                 }
             }
             while (line != null);
-
-            // Create logging file.
-            logFilePath = currentPath + logPath;
-            FileInfo f = new FileInfo(logFilePath);
-            if (f.Exists)
-                f.Delete();
-            StreamWriter logger = f.CreateText();
-            logger.WriteLine(setupNumber);
-            logger.WriteLine();
-            logger.WriteLine("t,event,fromFloor,toFloor,fromRoom,toRoom");
-            logger.Close();
         }
     }
 
@@ -116,13 +105,10 @@ public static class Museum
         }
     }
 
-    public static void ToRoom(int room, bool log = true)
+    public static void ToRoom(int room)
     {
         int fromRoom = CurrentFloor.currentRoom;
         CurrentFloor.ToRoom(room);
-
-        if (log)
-            Log(Time.time, "to_room", currentFloor, currentFloor, fromRoom, room);
     }
 
     public static void ToNextFloor()
@@ -131,26 +117,5 @@ public static class Museum
         int fromRoom = CurrentFloor.currentRoom;
         if (currentFloor < floors.Count - 1)
             currentFloor++;
-
-        Log(Time.time, "next_floor", fromFloor, currentFloor, fromRoom, CurrentFloor.currentRoom);
-    }
-
-    public static void Log(float t, string ev, int fromFloor = -1, int toFloor = -1, int fromRoom = -1, int toRoom = -1)
-    {
-        LogPlain(
-            t
-            + "," + ev
-            + "," + (fromFloor == -1 ? currentFloor : fromFloor)
-            + "," + (toFloor == -1 ? currentFloor : toFloor)
-            + "," + (fromRoom == -1 ? CurrentFloor.currentRoom : fromRoom)
-            + "," + (toRoom == -1 ? CurrentFloor.currentRoom : toRoom)
-            );
-    }
-
-    public static void LogPlain(string s)
-    {
-        StreamWriter logger = new StreamWriter(logFilePath, true);
-        logger.WriteLine(s);
-        logger.Close();
     }
 }

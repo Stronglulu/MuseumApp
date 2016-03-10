@@ -48,9 +48,6 @@ public class ResetButton : MonoBehaviour
                 timer = 0;
                 t = 0;
                 text.text = "LookUp";
-
-                //overlay.t = 0;
-                Museum.Log(Time.time, "replay_extending");
             }
         }
         else
