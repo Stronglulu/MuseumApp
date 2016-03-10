@@ -1,0 +1,28 @@
+1
+
+EMPTY
+
+Pearl None None
+
+WR1 Snow None
+RS1 Rain None
+FR2 Leaf None
+
+MIDDLE
+
+RS2 Rain rainAmbience
+FS1 Leaf forestAmbience
+WR2 Snow snowAmbience
+
+MIDDLE
+
+FS2 Leaf forestMusic
+WS1 Snow snowMusic
+RR1 Rain rainMusic
+
+WS2 Snow museumAmbience
+RR2 Rain museumAmbience
+FR1 Leaf museumAmbience
+
+END
+
