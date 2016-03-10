@@ -46,9 +46,9 @@ public static class Museum
                         rooms = new List<Room>();
                         hallwayText = "";
                     }
-                    // Two words marks a room.
-                    else if (words.Length == 2)
-                        rooms.Add(new Room(words[0], words[1]));
+                    // Three words marks a room.
+                    else if (words.Length == 3)
+                        rooms.Add(new Room(words[0], words[1], words[2]));
                     else if (words.Length == 1)
                         hallwayText = HallwayText(words[0]);
                 }

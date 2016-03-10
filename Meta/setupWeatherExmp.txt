@@ -2,27 +2,27 @@
 
 EMPTY
 
-WS2 None
+WS2 None None
 
-WS2 Snow
-RS2 Rain
-FS2 Leaf
-
-MIDDLE
-
-RS1 Rain
-FS1 Leaf
-WS1 Snow
+WS2 Snow None
+RS2 Rain None
+FS2 Leaf None
 
 MIDDLE
 
-FR2 Leaf
-WR2 Snow
-RR2 Rain
+RS1 Rain rainAmbience
+FS1 Leaf forestAmbience
+WS1 Snow snowAmbience
 
-WR1 Snow
-RR1 Rain
-FR1 Leaf
+MIDDLE
+
+FR2 Leaf forestMusic
+WR2 Snow snowMusic
+RR2 Rain rainMusic
+
+WR1 Snow museumAmbience
+RR1 Rain museumAmbience
+FR1 Leaf museumAmbience
 
 END
 

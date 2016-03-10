@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class Decoration : MonoBehaviour {
 
@@ -7,11 +8,20 @@ public class Decoration : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Debug.Log("Floor: " + Museum.currentFloor);
-        child = transform.FindChild("Floor" + (Museum.currentFloor)).gameObject;
-        child.SetActive(true);
-        //Debug.Log("Floor: "+ Museum.currentFloor);
-        Debug.Log(child);
+
+        try
+        {
+            child = transform.FindChild("Floor" + (Museum.currentFloor)).gameObject;
+        }
+        catch (Exception e)
+        {
+            print("no child found");
+        }
+        if(child != null)
+            child.SetActive(true);
+        
+
+        
 	}
 	
 	// Update is called once per frame

@@ -8,10 +8,15 @@ public class Initialize : MonoBehaviour
     string logPath = "/log1.csv";
     string dataPath;
     int logNr = 1;
+    GameObject audio;
 
 	void Start()
     {
         dataPath = Museum.getDataPath();
+
+        audio = GameObject.Find("AudioSource");
+        Debug.Log(audio);
+        DontDestroyOnLoad(audio);
 
         // Loop through existing files until one cannot be found.
         while (File.Exists(dataPath + logPath))
