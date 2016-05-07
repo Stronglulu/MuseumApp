@@ -58,8 +58,8 @@ public static class Museum
             // Create logging file.
             logFilePath = currentPath + logPath;
             FileInfo f = new FileInfo(logFilePath);
-            if (f.Exists)
-                f.Delete();
+            //if (f.Exists)
+                //f.Delete();
             StreamWriter logger = f.CreateText();
             logger.WriteLine(setupNumber);
             logger.WriteLine();
