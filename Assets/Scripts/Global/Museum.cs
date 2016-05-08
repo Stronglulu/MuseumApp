@@ -14,6 +14,7 @@ public static class Museum
 
     public static void Load(string setupPath, string logPath)
     {
+        Debug.Log("wat");
         string currentPath = getDataPath();
 
         floors = new List<Floor>();
@@ -21,6 +22,7 @@ public static class Museum
         // Load museum.
         string setupNumber;
         string file = currentPath + setupPath;
+        Debug.Log(file);
         string line, hallwayText = "";
         using (StreamReader reader = new StreamReader(file))
         {
