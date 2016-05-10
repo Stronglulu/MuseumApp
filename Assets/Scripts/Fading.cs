@@ -25,7 +25,6 @@ public class Fading : MonoBehaviour
 
         Color c = GUI.color;
         c.a = Mathf.Lerp(1f, 0f, (Time.time - startTime));
-        Debug.Log(c.a);
         GUI.color = c;
 
         GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), black);

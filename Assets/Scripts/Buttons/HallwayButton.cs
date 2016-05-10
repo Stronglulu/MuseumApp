@@ -42,8 +42,8 @@ public class HallwayButton : Button
 
     public override bool IsActive()
     {
-        // Tutorial floor unlocking.
-        if (Museum.currentFloor == 1)
+        // Force order.
+        //if (Museum.currentFloor == 1)
             for (int i = 0; i < buttonIndex - 1; i++)
                 if (!Museum.CurrentFloor.rooms[i].visited)
                     return false;
