@@ -24,7 +24,7 @@ public class HallwayButton : Button
 
             GameObject icon = transform.Find("Icon").gameObject;
             Renderer iconRenderer = icon.GetComponent<Renderer>();
-            iconRenderer.material = Resources.Load<Material>("Materials/Icon" + room.effect);
+            iconRenderer.material = Resources.Load<Material>("Materials/IconStandard");//" + room.effect);
 
             if (room.visited)
             {
