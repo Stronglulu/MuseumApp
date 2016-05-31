@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: 341e78273cd18f04a9c4e067cf28adfc
+timeCreated: 1464692151
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: b1
+    100002: b2
+    100004: b2_MeshPart0
+    100006: b2_MeshPart1
+    100008: b3
+    100010: b301
+    100012: b301_MeshPart0
+    100014: b301_MeshPart1
+    100016: b301_MeshPart2
+    100018: b302
+    100020: b302_MeshPart0
+    100022: b302_MeshPart1
+    100024: b302_MeshPart2
+    100026: b303
+    100028: b303_MeshPart0
+    100030: b303_MeshPart1
+    100032: b3_MeshPart0
+    100034: b3_MeshPart1
+    100036: bloss
+    100038: blosstip0
+    100040: blosstip1
+    100042: blosstip2
+    100044: blossx
+    100046: blossxtip0
+    100048: blossxtip1
+    100050: blossxtip2
+    100052: //RootNode
+    100054: roots2
+    100056: trunk
+    400000: b1
+    400002: b2
+    400004: b2_MeshPart0
+    400006: b2_MeshPart1
+    400008: b3
+    400010: b301
+    400012: b301_MeshPart0
+    400014: b301_MeshPart1
+    400016: b301_MeshPart2
+    400018: b302
+    400020: b302_MeshPart0
+    400022: b302_MeshPart1
+    400024: b302_MeshPart2
+    400026: b303
+    400028: b303_MeshPart0
+    400030: b303_MeshPart1
+    400032: b3_MeshPart0
+    400034: b3_MeshPart1
+    400036: bloss
+    400038: blosstip0
+    400040: blosstip1
+    400042: blosstip2
+    400044: blossx
+    400046: blossxtip0
+    400048: blossxtip1
+    400050: blossxtip2
+    400052: //RootNode
+    400054: roots2
+    400056: trunk
+    2300000: b1
+    2300002: b2_MeshPart0
+    2300004: b2_MeshPart1
+    2300006: b301_MeshPart0
+    2300008: b301_MeshPart1
+    2300010: b301_MeshPart2
+    2300012: b302_MeshPart0
+    2300014: b302_MeshPart1
+    2300016: b302_MeshPart2
+    2300018: b303_MeshPart0
+    2300020: b303_MeshPart1
+    2300022: b3_MeshPart0
+    2300024: b3_MeshPart1
+    2300026: bloss
+    2300028: blosstip0
+    2300030: blosstip1
+    2300032: blosstip2
+    2300034: blossx
+    2300036: blossxtip0
+    2300038: blossxtip1
+    2300040: blossxtip2
+    2300042: roots2
+    2300044: trunk
+    3300000: b1
+    3300002: b2_MeshPart0
+    3300004: b2_MeshPart1
+    3300006: b301_MeshPart0
+    3300008: b301_MeshPart1
+    3300010: b301_MeshPart2
+    3300012: b302_MeshPart0
+    3300014: b302_MeshPart1
+    3300016: b302_MeshPart2
+    3300018: b303_MeshPart0
+    3300020: b303_MeshPart1
+    3300022: b3_MeshPart0
+    3300024: b3_MeshPart1
+    3300026: bloss
+    3300028: blosstip0
+    3300030: blosstip1
+    3300032: blosstip2
+    3300034: blossx
+    3300036: blossxtip0
+    3300038: blossxtip1
+    3300040: blossxtip2
+    3300042: roots2
+    3300044: trunk
+    4300000: roots2
+    4300002: blossx
+    4300004: bloss
+    4300006: b303_MeshPart0
+    4300008: b303_MeshPart1
+    4300010: b302_MeshPart0
+    4300012: b302_MeshPart1
+    4300014: b302_MeshPart2
+    4300016: b301_MeshPart0
+    4300018: b301_MeshPart1
+    4300020: b301_MeshPart2
+    4300022: b3_MeshPart0
+    4300024: b3_MeshPart1
+    4300026: blossxtip2
+    4300028: blosstip2
+    4300030: b2_MeshPart0
+    4300032: b2_MeshPart1
+    4300034: blossxtip1
+    4300036: blosstip1
+    4300038: b1
+    4300040: blossxtip0
+    4300042: blosstip0
+    4300044: trunk
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
