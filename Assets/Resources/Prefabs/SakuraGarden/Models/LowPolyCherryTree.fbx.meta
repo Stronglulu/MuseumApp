@@ -1,0 +1,194 @@
+fileFormatVersion: 2
+guid: 7a5a92d289b0d0b4c81de19c245415e0
+timeCreated: 1464794768
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: CherryTree1:b1
+    100002: CherryTree1:b1_copy
+    100004: CherryTree1:b2
+    100006: CherryTree1:b2_copy
+    100008: CherryTree1:b3
+    100010: CherryTree1:b301
+    100012: CherryTree1:bloss
+    100014: CherryTree1:bloss_co01
+    100016: CherryTree1:bloss_copy
+    100018: CherryTree1:blosstip0_
+    100020: CherryTree1:blosstip1
+    100022: CherryTree1:blosstip1_
+    100024: CherryTree1:blosstip2
+    100026: CherryTree1:blosstip2_
+    100028: CherryTree1:blossx
+    100030: CherryTree1:blossx_c01
+    100032: CherryTree1:blossx_cop
+    100034: CherryTree1:blossxti01
+    100036: CherryTree1:blossxti02
+    100038: CherryTree1:blossxtip0
+    100040: CherryTree1:blossxtip1
+    100042: CherryTree1:blossxtip2
+    100044: CherryTree1:trunk
+    100046: CherryTree1:trunk_copy
+    100048: //RootNode
+    400000: CherryTree1:b1
+    400002: CherryTree1:b1_copy
+    400004: CherryTree1:b2
+    400006: CherryTree1:b2_copy
+    400008: CherryTree1:b3
+    400010: CherryTree1:b301
+    400012: CherryTree1:bloss
+    400014: CherryTree1:bloss_co01
+    400016: CherryTree1:bloss_copy
+    400018: CherryTree1:blosstip0_
+    400020: CherryTree1:blosstip1
+    400022: CherryTree1:blosstip1_
+    400024: CherryTree1:blosstip2
+    400026: CherryTree1:blosstip2_
+    400028: CherryTree1:blossx
+    400030: CherryTree1:blossx_c01
+    400032: CherryTree1:blossx_cop
+    400034: CherryTree1:blossxti01
+    400036: CherryTree1:blossxti02
+    400038: CherryTree1:blossxtip0
+    400040: CherryTree1:blossxtip1
+    400042: CherryTree1:blossxtip2
+    400044: CherryTree1:trunk
+    400046: CherryTree1:trunk_copy
+    400048: //RootNode
+    2300000: CherryTree1:b1
+    2300002: CherryTree1:b1_copy
+    2300004: CherryTree1:b2
+    2300006: CherryTree1:b2_copy
+    2300008: CherryTree1:b3
+    2300010: CherryTree1:b301
+    2300012: CherryTree1:bloss
+    2300014: CherryTree1:bloss_co01
+    2300016: CherryTree1:bloss_copy
+    2300018: CherryTree1:blosstip0_
+    2300020: CherryTree1:blosstip1
+    2300022: CherryTree1:blosstip1_
+    2300024: CherryTree1:blosstip2
+    2300026: CherryTree1:blosstip2_
+    2300028: CherryTree1:blossx
+    2300030: CherryTree1:blossx_c01
+    2300032: CherryTree1:blossx_cop
+    2300034: CherryTree1:blossxti01
+    2300036: CherryTree1:blossxti02
+    2300038: CherryTree1:blossxtip0
+    2300040: CherryTree1:blossxtip1
+    2300042: CherryTree1:blossxtip2
+    2300044: CherryTree1:trunk
+    2300046: CherryTree1:trunk_copy
+    3300000: CherryTree1:b1
+    3300002: CherryTree1:b1_copy
+    3300004: CherryTree1:b2
+    3300006: CherryTree1:b2_copy
+    3300008: CherryTree1:b3
+    3300010: CherryTree1:b301
+    3300012: CherryTree1:bloss
+    3300014: CherryTree1:bloss_co01
+    3300016: CherryTree1:bloss_copy
+    3300018: CherryTree1:blosstip0_
+    3300020: CherryTree1:blosstip1
+    3300022: CherryTree1:blosstip1_
+    3300024: CherryTree1:blosstip2
+    3300026: CherryTree1:blosstip2_
+    3300028: CherryTree1:blossx
+    3300030: CherryTree1:blossx_c01
+    3300032: CherryTree1:blossx_cop
+    3300034: CherryTree1:blossxti01
+    3300036: CherryTree1:blossxti02
+    3300038: CherryTree1:blossxtip0
+    3300040: CherryTree1:blossxtip1
+    3300042: CherryTree1:blossxtip2
+    3300044: CherryTree1:trunk
+    3300046: CherryTree1:trunk_copy
+    4300000: CherryTree1:blossx_c01
+    4300002: CherryTree1:bloss_co01
+    4300004: CherryTree1:blossx
+    4300006: CherryTree1:bloss
+    4300008: CherryTree1:b301
+    4300010: CherryTree1:b3
+    4300012: CherryTree1:blossxti02
+    4300014: CherryTree1:blosstip2
+    4300016: CherryTree1:b2
+    4300018: CherryTree1:blossxti01
+    4300020: CherryTree1:blosstip1
+    4300022: CherryTree1:b1
+    4300024: CherryTree1:blossx_cop
+    4300026: CherryTree1:bloss_copy
+    4300028: CherryTree1:blossxtip2
+    4300030: CherryTree1:blosstip2_
+    4300032: CherryTree1:b2_copy
+    4300034: CherryTree1:blossxtip1
+    4300036: CherryTree1:blosstip1_
+    4300038: CherryTree1:b1_copy
+    4300040: CherryTree1:blossxtip0
+    4300042: CherryTree1:blosstip0_
+    4300044: CherryTree1:trunk_copy
+    4300046: CherryTree1:trunk
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
