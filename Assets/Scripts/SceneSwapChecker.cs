@@ -7,6 +7,9 @@ public class SceneSwapChecker : MonoBehaviour
     public int ThresholdZ;
     public GameObject MuseumRoom;
     public GameObject PaintingScene;
+    public ScreenFader fadert;
+
+    private bool isPaintingRoom = false;
 	// Use this for initialization
 	void Start () {
 	
@@ -16,19 +19,23 @@ public class SceneSwapChecker : MonoBehaviour
 	void Update () {
 	    if (Transformor.position.z > ThresholdZ)
 	    {
-	        if (!PaintingScene.activeSelf)
+	        if (!isPaintingRoom)
 	        {
-	            PaintingScene.SetActive(true);
-	            MuseumRoom.SetActive(false);
+                isPaintingRoom = true;
+	            //PaintingScene.SetActive(true);
+	            //MuseumRoom.SetActive(false);
+                fadert.EndScene(MuseumRoom, PaintingScene);
 	            print("Sakura");
 	        }
 	    }
 	    else
 	    {
-	        if (!MuseumRoom.activeSelf)
+	        if (isPaintingRoom)
 	        {
-	            PaintingScene.SetActive(false);
-	            MuseumRoom.SetActive(true);
+                isPaintingRoom = false;
+                fadert.EndScene(PaintingScene, MuseumRoom);
+	            //PaintingScene.SetActive(false);
+	            //MuseumRoom.SetActive(true);
 	            print("Museum");
 	        }
 	    }
