@@ -7,8 +7,8 @@ public class SceneOrchestrator : MonoBehaviour
 {
     public Image FadeImg;
     public float fadeSpeed = 1.5f;
-    public bool sceneStarting = true;
-    private bool isFading = false;
+    public bool isFadingIn = true;
+    private bool IsFadingOut = false;
     GameObject oldScene;
     GameObject newScene;
 
@@ -20,11 +20,10 @@ public class SceneOrchestrator : MonoBehaviour
     void Update()
     {
         // [SWAPPING SCENES]
-        if (sceneStarting)
+        if (isFadingIn)
             StartScene();
-        if (isFading)
+        if (IsFadingOut)
             FadeOut();
-
     }
 
     public void SwapScene(GameObject oldScene, GameObject newScene)
@@ -32,9 +31,11 @@ public class SceneOrchestrator : MonoBehaviour
         this.oldScene = oldScene;
         this.newScene = newScene;
 
-        isFading = true;
+        IsFadingOut = true;
         FadeOut();
     }
+
+
 
     void FadeToClear()
     {
@@ -63,7 +64,7 @@ public class SceneOrchestrator : MonoBehaviour
             FadeImg.enabled = false;
 
             // The scene is no longer starting.
-            sceneStarting = false;
+            isFadingIn = false;
         }
     }
 
@@ -80,8 +81,8 @@ public class SceneOrchestrator : MonoBehaviour
         {
             newScene.SetActive(true);
             oldScene.SetActive(false);
-            isFading = false;
-            sceneStarting = true;
+            IsFadingOut = false;
+            isFadingIn = true;
             StartScene();
         }
         // ... reload the level
