@@ -4,6 +4,7 @@ using System.Collections;
 public class OverlayTransitionDistance : MonoBehaviour
 {
     public GameObject player;
+    public float speed = 0.005f;
     float maxDistance = 4;
     float distance;
     Renderer rend;
@@ -22,9 +23,9 @@ public class OverlayTransitionDistance : MonoBehaviour
         if (distance < maxDistance)
         {
             if (increase)
-                rend.material.SetFloat("_Blend", rend.material.GetFloat("_Blend") + 0.01f);
+                rend.material.SetFloat("_Blend", rend.material.GetFloat("_Blend") + speed);
             else
-                rend.material.SetFloat("_Blend", rend.material.GetFloat("_Blend") - 0.01f);
+                rend.material.SetFloat("_Blend", rend.material.GetFloat("_Blend") - speed);
 
             if (rend.material.GetFloat("_Blend") >= 1 || rend.material.GetFloat("_Blend") <= 0)
                 increase = !increase;
