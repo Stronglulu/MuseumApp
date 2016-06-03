@@ -4,7 +4,7 @@ using System.Collections;
 public class SceneSwapChecker : MonoBehaviour
 {
     public Transform PlayerTransform;
-    public int SpawnRadius;
+    public float SpawnRadius;
     public GameObject CurrentScene;
     public GameObject NextScene;
     public SceneOrchestrator Orchestrator;
