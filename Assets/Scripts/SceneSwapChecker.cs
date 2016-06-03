@@ -3,13 +3,13 @@ using System.Collections;
 
 public class SceneSwapChecker : MonoBehaviour
 {
-    public Transform Transformor;
+    public Transform PlayerTransform;
     public int SpawnRadius;
-    public GameObject MuseumRoom;
-    public GameObject PaintingScene;
+    public GameObject CurrentScene;
+    public GameObject NextScene;
     public SceneOrchestrator Orchestrator;
 
-    private bool isPaintingRoom = false;
+    private bool IsSwappingToNextScene = false;
 	// Use this for initialization
 	void Start () {
 	
@@ -18,27 +18,34 @@ public class SceneSwapChecker : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-	    float paintingDistance = Vector3.Distance(Transformor.position, transform.position);
-	    
+	    float paintingDistance = Vector3.Distance(PlayerTransform.position, transform.position);
+
 	    if (paintingDistance < SpawnRadius)
 	    {
-	        if (!isPaintingRoom)
+	        if (!IsSwappingToNextScene)
 	        {
-                // swap to painting scene
-                isPaintingRoom = true;
-                Orchestrator.SwapScene(MuseumRoom, PaintingScene);
-	            print("Sakura");
+	            // swap to painting scene
+	            IsSwappingToNextScene = true;
+	            Orchestrator.SwapScene(CurrentScene, NextScene);
 	        }
 	    }
 	    else
 	    {
-	        if (isPaintingRoom)
+	        if (IsSwappingToNextScene)
 	        {
-                isPaintingRoom = false;
-                Orchestrator.SwapScene(PaintingScene, MuseumRoom);
-	            print("Museum");
+	            IsSwappingToNextScene = false;
 	        }
 	    }
-        
+        /**
+	    else
+	    {
+	        if (IsSwappingToNextScene)
+	        {
+                //swap to Museum
+                IsSwappingToNextScene = false;
+                Orchestrator.SwapScene(NextScene, CurrentScene);
+	        }
+	    }
+        **/
 	}
 }

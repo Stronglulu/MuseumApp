@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class SceneOrchestrator : MonoBehaviour
 {
     public Image FadeImg;
-    public float fadeSpeed = 1.5f;
+    public float fadeOutSpeed = 7f;
+    public float fadeInSpeed = 5f;
     public bool isFadingIn = true;
     private bool IsFadingOut = false;
     GameObject oldScene;
@@ -40,14 +41,14 @@ public class SceneOrchestrator : MonoBehaviour
     void FadeToClear()
     {
         // Lerp the colour of the image between itself and transparent.
-        FadeImg.color = Color.Lerp(FadeImg.color, Color.clear, fadeSpeed * Time.deltaTime);
+        FadeImg.color = Color.Lerp(FadeImg.color, Color.clear, fadeInSpeed * Time.deltaTime);
     }
 
 
     void FadeToWhite()
     {
         // Lerp the colour of the image between itself and black.
-        FadeImg.color = Color.Lerp(FadeImg.color, Color.white, fadeSpeed * Time.deltaTime);
+        FadeImg.color = Color.Lerp(FadeImg.color, Color.white, fadeOutSpeed * Time.deltaTime);
     }
 
 
@@ -57,7 +58,7 @@ public class SceneOrchestrator : MonoBehaviour
         FadeToClear();
 
         // If the texture is almost clear...
-        if (FadeImg.color.a <= 0.05f)
+        if (FadeImg.color.a <= 0.01f)
         {
             // ... set the colour to clear and disable the RawImage.
             FadeImg.color = Color.clear;
@@ -77,7 +78,7 @@ public class SceneOrchestrator : MonoBehaviour
         FadeToWhite();
 
         // If the screen is almost black...
-        if (FadeImg.color.a >= 0.95f)
+        if (FadeImg.color.a >= 0.99f)
         {
             newScene.SetActive(true);
             oldScene.SetActive(false);
