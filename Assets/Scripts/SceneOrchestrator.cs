@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class ScreenFader : MonoBehaviour
+public class SceneOrchestrator : MonoBehaviour
 {
     public Image FadeImg;
     public float fadeSpeed = 1.5f;
@@ -19,16 +19,22 @@ public class ScreenFader : MonoBehaviour
 
     void Update()
     {
-        // If the scene is starting...
+        // [SWAPPING SCENES]
         if (sceneStarting)
-            // ... call the StartScene function.
             StartScene();
         if (isFading)
-        {
-            DarkFade();
-        }
+            FadeOut();
+
     }
 
+    public void SwapScene(GameObject oldScene, GameObject newScene)
+    {
+        this.oldScene = oldScene;
+        this.newScene = newScene;
+
+        isFading = true;
+        FadeOut();
+    }
 
     void FadeToClear()
     {
@@ -37,7 +43,7 @@ public class ScreenFader : MonoBehaviour
     }
 
 
-    void FadeToBlack()
+    void FadeToWhite()
     {
         // Lerp the colour of the image between itself and black.
         FadeImg.color = Color.Lerp(FadeImg.color, Color.white, fadeSpeed * Time.deltaTime);
@@ -61,23 +67,13 @@ public class ScreenFader : MonoBehaviour
         }
     }
 
-
-    public void EndScene(GameObject oldScene, GameObject newScene)
-    {
-        this.oldScene = oldScene;
-        this.newScene = newScene;
-
-        isFading = true;
-        DarkFade();
-    }
-
-    public void DarkFade()
+    public void FadeOut()
     {
         // Make sure the RawImage is enabled.
         FadeImg.enabled = true;
 
         // Start fading towards black.
-        FadeToBlack();
+        FadeToWhite();
 
         // If the screen is almost black...
         if (FadeImg.color.a >= 0.95f)
