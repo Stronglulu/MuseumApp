@@ -13,6 +13,8 @@ public class SceneOrchestrator : MonoBehaviour
     GameObject oldScene;
     GameObject newScene;
 
+    public static string currentScene = "StandardMuseumScene";
+
     void Awake()
     {
         FadeImg.rectTransform.localScale = new Vector2(Screen.width, Screen.height);

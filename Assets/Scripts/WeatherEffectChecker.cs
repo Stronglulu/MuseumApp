@@ -5,7 +5,7 @@ public class WeatherEffectChecker : MonoBehaviour
 {
     public Transform PlayerTransform;
     public int SpawnRadius;
-    public ParticleSystem WeatherParticleSystem;
+    public ParticleSystem[] WeatherParticleSystem;
 	// Use this for initialization
 	void Start () {
 	    
@@ -16,21 +16,25 @@ public class WeatherEffectChecker : MonoBehaviour
 	{
 	    float paintingDistance = Vector3.Distance(PlayerTransform.position, transform.position);
 
-	    if (paintingDistance < SpawnRadius)
-	    {
-	        if (!WeatherParticleSystem.isPlaying)
-	        {
-	            WeatherParticleSystem.Play();
-	        }
-
-	    }
-	    else
-	    {
-            if (WeatherParticleSystem.isPlaying)
+        foreach (ParticleSystem pSystem in WeatherParticleSystem)
+        {
+            if (paintingDistance < SpawnRadius)
             {
-                WeatherParticleSystem.Stop();
+
+                if (!pSystem.isPlaying)
+                {
+                    pSystem.Play();
+                }
+
             }
-	    }
+            else
+            {
+                if (pSystem.isPlaying)
+                {
+                    pSystem.Stop();
+                }
+            }
+        }
 
 	}
 }

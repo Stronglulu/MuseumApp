@@ -26,6 +26,7 @@ public class SceneSwapChecker : MonoBehaviour
 	        {
 	            // swap to painting scene
 	            IsSwappingToNextScene = true;
+                SceneOrchestrator.currentScene = NextScene.name;
 	            Orchestrator.SwapScene(CurrentScene, NextScene);
 	        }
 	    }
