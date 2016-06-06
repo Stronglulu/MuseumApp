@@ -29,12 +29,16 @@ public class OverlaySwirl : MonoBehaviour
         if (distance < maxDist)
         {
             //%of scale increase/decrease
-            scaling = 1 - ((distance - minDist) / (maxDist - minDist));
+            scaling = 1 - ((distance - minDist)/(maxDist - minDist));
 
             //Absolute increase/decrease
-            newScale = (maxScaleX - minScaleX) * scaling;
+            newScale = (maxScaleX - minScaleX)*scaling;
 
             transform.localScale = new Vector3(minScaleX + newScale, transform.localScale.y, minScaleZ + newScale);
+        }
+        else
+        {
+            transform.localScale = new Vector3(minScaleX, transform.localScale.y, minScaleZ);
         }
 
     }
