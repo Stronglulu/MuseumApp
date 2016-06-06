@@ -36,6 +36,7 @@ public class SceneSwapChecker : MonoBehaviour
 	        {
                 //swap to Museum
                 IsSwappingToNextScene = false;
+                SceneOrchestrator.currentScene = CurrentScene.name;
                 Orchestrator.SwapScene(NextScene, CurrentScene);
 	        }
 	    }

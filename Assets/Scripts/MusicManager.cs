@@ -30,8 +30,8 @@ public class MusicManager : MonoBehaviour {
         else
         {
             audioSource.volume -= fadeSpeed;// .Stop();
-            if (audioSource.volume == 0)
-                audioSource.Stop();
+           // if (audioSource.volume == 0)
+            //    audioSource.Stop();
         }
 	}
 }
