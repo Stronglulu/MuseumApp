@@ -14,6 +14,8 @@ public class OverlaySwirl : MonoBehaviour
     float distance, scaling, newScale;
     Vector3 scale;
 
+    protected CardboardHead head;
+
     // Use this for initialization
     void Start()
     {
@@ -23,6 +25,12 @@ public class OverlaySwirl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        head = Camera.main.GetComponent<StereoController>().Head;
+
+        RaycastHit hit;
+        bool isLookedAt = GetComponent<Collider>().Raycast(head.Gaze, out hit, Mathf.Infinity);
+
+        print("IslookedAt: " + isLookedAt);
 
         distance = Vector3.Distance(player.transform.position, transform.position);
 
