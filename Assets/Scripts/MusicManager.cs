@@ -17,7 +17,6 @@ public class MusicManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        Debug.Log(SceneOrchestrator.currentScene);
         currentScene = SceneOrchestrator.currentScene;
         if (currentScene == "PaintingSceneSakura")
         {

@@ -1,12 +1,13 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class OverlayTransitionDistance : MonoBehaviour
 {
     public GameObject player;
     public float speed = 0.005f;
-    float maxDistance = 4;
-    float distance;
+    float maxDistance = 6f;
+    float distance, scaledDistance;
     Renderer rend;
     bool increase = false;
 
@@ -19,9 +20,13 @@ public class OverlayTransitionDistance : MonoBehaviour
     public void Update()
     {
         distance = Vector3.Distance(player.transform.position, transform.position);
-        Debug.Log(rend.material.GetFloat("_Blend"));
+        
         if (distance < maxDistance)
         {
+            scaledDistance = (distance -3)/(maxDistance - 3);
+            Debug.Log(scaledDistance);
+            rend.material.SetFloat("_Blend", scaledDistance);
+            /**
             if (increase)
                 rend.material.SetFloat("_Blend", rend.material.GetFloat("_Blend") + speed);
             else
@@ -29,6 +34,12 @@ public class OverlayTransitionDistance : MonoBehaviour
 
             if (rend.material.GetFloat("_Blend") >= 1 || rend.material.GetFloat("_Blend") <= 0)
                 increase = !increase;
+             8*/
+        }
+        else
+        {
+            rend.material.SetFloat("_Blend", 1);
+            //increase = false;
         }
     }
 }
