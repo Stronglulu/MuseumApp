@@ -34,19 +34,10 @@ public class SceneSwapChecker : MonoBehaviour
 	    {
 	        if (IsSwappingToNextScene)
 	        {
-	            IsSwappingToNextScene = false;
-	        }
-	    }
-        /**
-	    else
-	    {
-	        if (IsSwappingToNextScene)
-	        {
                 //swap to Museum
                 IsSwappingToNextScene = false;
                 Orchestrator.SwapScene(NextScene, CurrentScene);
 	        }
 	    }
-        **/
 	}
 }

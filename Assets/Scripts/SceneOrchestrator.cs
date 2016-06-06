@@ -34,6 +34,7 @@ public class SceneOrchestrator : MonoBehaviour
         this.oldScene = oldScene;
         this.newScene = newScene;
 
+        isFadingIn = false;
         IsFadingOut = true;
         FadeOut();
     }
