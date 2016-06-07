@@ -6,7 +6,7 @@ public class OverlayTransitionDistance : MonoBehaviour
 {
     public GameObject player;
     public float speed = 0.005f;
-    float maxDistance = 6f;
+    float maxDistance = 5.5f;
     float distance, scaledDistance;
     Renderer rend;
     bool increase = false;
@@ -23,7 +23,7 @@ public class OverlayTransitionDistance : MonoBehaviour
         
         if (distance < maxDistance)
         {
-            scaledDistance = Math.Max((distance -3.5f)/(maxDistance - 3.5f), 0);
+            scaledDistance = Math.Max((distance -3f)/(maxDistance - 3f), 0);
             rend.material.SetFloat("_Blend", scaledDistance);
             /**
             if (increase)
