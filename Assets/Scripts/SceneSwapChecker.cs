@@ -41,7 +41,7 @@ public class SceneSwapChecker : MonoBehaviour
 	            Orchestrator.SwapScene(CurrentScene, NextScene);
 	        }
 	    }
-	    else if(!isLookingAtExit)
+	    else if(!isLookingAtExit || paintingDistance > SpawnRadius)
 	    {
 	        if (IsSwappingToNextScene)
 	        {

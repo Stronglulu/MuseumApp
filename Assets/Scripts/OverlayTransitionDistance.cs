@@ -23,8 +23,7 @@ public class OverlayTransitionDistance : MonoBehaviour
         
         if (distance < maxDistance)
         {
-            scaledDistance = (distance -3)/(maxDistance - 3);
-            Debug.Log(scaledDistance);
+            scaledDistance = Math.Max((distance -3.5f)/(maxDistance - 3.5f), 0);
             rend.material.SetFloat("_Blend", scaledDistance);
             /**
             if (increase)
