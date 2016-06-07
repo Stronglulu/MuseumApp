@@ -1,17 +1,26 @@
 fileFormatVersion: 2
-guid: 818eb90d6ce293347abde04060caa91f
-timeCreated: 1464981314
-licenseType: Free
+guid: 7cf5161201fc518428416d45452bd3d5
+timeCreated: 1465311359
+licenseType: Pro
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
+    100000: Camera
+    100002: Lamp
+    100004: //RootNode
+    100006: MuseumRoof
+    100008: MuseumRoof:MuseumRoof
+    400000: Camera
+    400002: Lamp
+    400004: //RootNode
+    400006: MuseumRoof
+    400008: MuseumRoof:MuseumRoof
+    2300000: MuseumRoof
+    2300002: MuseumRoof:MuseumRoof
+    3300000: MuseumRoof
+    3300002: MuseumRoof:MuseumRoof
     4300000: MuseumRoof
-    7400000: Default Take
-    9500000: //RootNode
+    4300002: MuseumRoof:MuseumRoof
   materials:
     importMaterials: 1
     materialName: 0
@@ -70,7 +79,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
