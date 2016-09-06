@@ -46,8 +46,7 @@ public class IllusionSwapChecker : MonoBehaviour {
                 illusionActive = false;
             }
 
-
-            Debug.Log(illusionActive);
+            
         }
 	}
 }
