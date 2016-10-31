@@ -5,9 +5,12 @@ using System.Collections;
 public class OverlayTransitionDistance : MonoBehaviour
 {
     public GameObject player;
-    public float speed = 0.005f;
-    float maxDistance = 5.5f;
-    float distance, scaledDistance;
+    public float transitionTime = 2f;
+    public bool timeBased = false;
+
+    float maxDistance = 4f;
+    float scaledDistance = 1f;
+    float distance;
     Renderer rend;
     bool increase = false;
 
@@ -20,24 +23,28 @@ public class OverlayTransitionDistance : MonoBehaviour
     public void Update()
     {
         distance = Vector3.Distance(player.transform.position, transform.position);
-        
         if (distance < maxDistance)
         {
-            scaledDistance = Math.Max((distance -2f)/(maxDistance - 2f), 0);
+            if (timeBased)
+            {
+                scaledDistance = Math.Max(0, scaledDistance - Time.deltaTime/transitionTime);
+            }
+            else {
+                scaledDistance = Math.Max((distance - 2f) / (maxDistance - 2f), 0);
+            }
             rend.material.SetFloat("_Blend", scaledDistance);
-            /**
-            if (increase)
-                rend.material.SetFloat("_Blend", rend.material.GetFloat("_Blend") + speed);
-            else
-                rend.material.SetFloat("_Blend", rend.material.GetFloat("_Blend") - speed);
-
-            if (rend.material.GetFloat("_Blend") >= 1 || rend.material.GetFloat("_Blend") <= 0)
-                increase = !increase;
-             8*/
         }
         else
         {
-            rend.material.SetFloat("_Blend", 1);
+            if (timeBased)
+            {
+                scaledDistance = Math.Min(1, scaledDistance + Time.deltaTime/transitionTime);
+                rend.material.SetFloat("_Blend", scaledDistance);
+            }
+            else
+            {
+                rend.material.SetFloat("_Blend", 1);
+            }            
             //increase = false;
         }
     }
